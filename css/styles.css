@@ -44,6 +44,6 @@ body{
     border-radius: 20px;
 }
 
-#clear, #clearContainer, #zero, #zeroContainer{
+#clear, #clearContainer{
     width: 140px;
 }

@@ -1,5 +1,13 @@
 let firstNumber = 0;
 let secondNumber = 0;
+
+const DISPLAY = document.querySelector("#display");
+
+const numbers = document.querySelectorAll(".numbers");
+for(let i = 0; i < numbers.length; i++){
+    numbers[i].addEventListener('click', (e) => updateDisplay(e.target.textContent));
+}
+
 const OPERATOR ={
     none: 0,
     add: 1,
@@ -39,4 +47,8 @@ function operate(numberA, numberB, operator){
             divide(numberA, numberB)
             break;
     }
+}
+
+function updateDisplay(val){
+    DISPLAY.textContent += val;
 }
