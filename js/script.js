@@ -15,6 +15,16 @@ for(let i = 0; i < operators.length; i++){
 document.querySelector("#equals").addEventListener('click', 
     () => operate(result, DISPLAY.textContent, currentOperator));
 
+document.querySelector("#clear").addEventListener('click',
+    () => reset());
+
+document.querySelector("#del").addEventListener('click',
+    () => del())
+
+document.querySelector("#sign").addEventListener('click', function(){
+    DISPLAY.textContent = (Number(DISPLAY.textContent) * - 1).toString();
+});
+
 const OPERATOR ={
     none: 0,
     add: 1,
@@ -27,7 +37,7 @@ function reset(){
     result = "";
     secondNumber = "";
     currentOperator = 0;
-    updateDisplay("");    
+    DISPLAY.textContent = "";    
 }
 
 function add(a, b){
@@ -44,6 +54,12 @@ function multiply(a, b){
 
 function divide(a, b){
     return b == 0 ? "You stoopid" : a / b;
+}
+
+function del(){
+    const val = DISPLAY.textContent.substring(0, DISPLAY.textContent.length-1);
+    resetDisplay();
+    updateDisplay(val);
 }
 
 function operate(numberA, numberB, operator){
