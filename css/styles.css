@@ -1,4 +1,4 @@
-
+@import url('https://fonts.cdnfonts.com/css/seven-segment');
 body{
     height: 100vh;
 }
@@ -23,12 +23,22 @@ body{
     background-color: aqua;
 }
 
-#display{
+#displayContainer{
     background-color: rgb(199, 197, 197);
     width: 280px;
     height: 60px;
     border-radius: 20px;
     border: 2px solid black;
+    font-family: 'Seven Segment', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+#display{
+    width: 280px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .row{
