@@ -67,16 +67,16 @@ function operate(numberA, numberB, operator){
     numberB = Number(numberB);
     switch(operator){
         case OPERATOR.add:
-            result = add(numberA, numberB)
+            result = Number(add(numberA, numberB).toFixed(6));
             break;
         case OPERATOR.subtract:
-            result = subtract(numberA, numberB)
+            result = Number(subtract(numberA, numberB).toFixed(6));
             break;
         case OPERATOR.multiply:
-            result = multiply(numberA, numberB)
+            result = Number(multiply(numberA, numberB).toFixed(6));
             break;
         case OPERATOR.divide:
-            result = divide(numberA, numberB)
+            result = Number(divide(numberA, numberB).toFixed(6));
             break;
     }
 
